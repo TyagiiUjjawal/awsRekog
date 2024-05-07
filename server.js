@@ -8,7 +8,10 @@ const port = 4000;
 
 app.use(express.json());
 
-const rekognitionClient = new RekognitionClient({ region: 'ap-south-1' });
+const rekognitionClient = new RekognitionClient({ region: 'ap-south-1', credentials: {
+    accessKeyId: 'AKIAZQ3DOYFXJYPHXRM5',
+    secretAccessKey: '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',
+  }, });
 
 const detectFaces = async (imageBase64) => {
     try {
