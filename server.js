@@ -12,7 +12,7 @@ const rekognitionClient = new RekognitionClient({ region: 'ap-south-1'});
 
 const detectFaces = async (imageBase64) => {
     try {
-        const input = {
+        const input = { 
             Image: {
                 Bytes: Buffer.from(imageBase64, 'base64')
             },
